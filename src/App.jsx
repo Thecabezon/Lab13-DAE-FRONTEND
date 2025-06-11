@@ -10,7 +10,7 @@ import CategoryFormPage from './pages/CategoryFormPage'
 import PrimaryLayout from './layout/primaryLayout'
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <BrowserRouter>
