@@ -1,22 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-import { BrowserRouter, Route, Routes, Outlet } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import LoginPage from './pages/LoginPage'
 import HomePage from './pages/HomePage'
 import CategoryPage from './pages/CategoryPage'
 import SeriePage from './pages/SeriePage'
 import SerieFormPage from './pages/SerieFormPage'
 import CategoryFormPage from './pages/CategoryFormPage' 
-import HeaderComponent from './components/HeaderComponent'
-
-function Layout() {
-  return (
-    <>
-      <HeaderComponent />
-      <Outlet />
-    </>
-  )
-}
+import PrimaryLayout from './layout/primaryLayout'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,8 +16,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LoginPage />} />
-        
-        <Route element={<Layout />}>
+        <Route element={<PrimaryLayout />}>
           <Route path="/home" element={<HomePage />} />
           <Route path="/categories" element={<CategoryPage />} />
           <Route path="/series" element={<SeriePage />} />
