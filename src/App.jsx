@@ -9,12 +9,11 @@ import SerieFormPage from './pages/SerieFormPage'
 import CategoryFormPage from './pages/CategoryFormPage' 
 import HeaderComponent from './components/HeaderComponent'
 
-// Componente Layout que incluye el Header y renderiza las rutas hijas
 function Layout() {
   return (
     <>
       <HeaderComponent />
-      <Outlet /> {/* Aquí se renderizarán las rutas hijas */}
+      <Outlet />
     </>
   )
 }
@@ -25,10 +24,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Ruta de login sin header */}
         <Route path="/" element={<LoginPage />} />
         
-        {/* Rutas con header */}
         <Route element={<Layout />}>
           <Route path="/home" element={<HomePage />} />
           <Route path="/categories" element={<CategoryPage />} />

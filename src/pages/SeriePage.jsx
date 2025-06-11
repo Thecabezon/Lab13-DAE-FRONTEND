@@ -1,8 +1,8 @@
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import SerieComponent from '../components/SerieComponent';
-import { getAllSeriesService, deleteSerieService } from '../services/SerieService'; // NUEVO
+import { getAllSeriesService, deleteSerieService } from '../services/SerieService';
 
 function SeriePage() {
 
